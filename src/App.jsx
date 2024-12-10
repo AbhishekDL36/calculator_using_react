@@ -77,17 +77,18 @@ alert('select the other value')
       break
       case '*': setFinalans(ans.a*ans.b)
       break
-      case '%'  : setFinalans(ans.a/ans.b)
+      case '%'  : setFinalans((ans.a/ans.b).toFixed(3))
+     
+
     }
  
   },[values,finalans,ans.a,ans.b])
   return (
     <div className="h-[100vh] bg-gray-100 ">
-      {
-        finalans
-      }
+     
    <p className="bg-gray-400 text-[40px] text-white py-[20px] pl-[37%]">CALCULATOR APP</p>
    <input type="text" className="border-black border-solid border-[1px] absolute w-[500px] left-[410px] h-[40px] top-[120px] pl-[20px]"  readOnly value={values}/>
+   <p className="absolute top-[128px] left-[850px]">{finalans}</p>
    <div className="mt-[80px] ml-[340px] text-[30px] text-gray-800">
    
    <Digits getVal={getVal} />
