@@ -61,6 +61,15 @@ alert('select the other value')
     
     }
   }
+
+  if(val==="cross"){
+    setFinalans(0)
+    setValues(0)
+    setAns({
+      a:0,
+      b:0
+    })
+  }
  
 }
 

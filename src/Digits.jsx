@@ -28,7 +28,7 @@ function Digits({getVal}) {
 
 
       </div>
-      <button className=" border-black border-[1px] border-solid  mt-[50px] ml-[210px] px-[100px] py-[20px] bg-gray-300">☒</button>
+      <button className=" border-black border-[1px] border-solid  mt-[50px] ml-[210px] px-[100px] py-[20px] bg-gray-300" onClick={()=>getVal("cross")}>☒</button>
       </>
     );
   }
