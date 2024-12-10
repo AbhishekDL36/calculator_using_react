@@ -2,7 +2,7 @@
 function Sum() {
     return (
       <div className="App">
-     <p>SUM</p>
+     <p className="border-black border-[1px] border-solid  px-[70px] py-[20px]">+</p>
      
       </div>
     );
