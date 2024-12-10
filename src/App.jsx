@@ -5,8 +5,17 @@ function App() {
 
   const [values,setValues] = useState("")
   function getVal(val){
+if((val==='+'||val==='-'||val==='*'||val==='%' ||val==='='||val==='.') && values===''){
 
-    setValues(String(values)+String(val))
+}
+
+// if(){
+
+// }
+else{
+  setValues(String(values)+String(val))
+}
+    
     console.log(values)
   }
   useEffect(()=>{

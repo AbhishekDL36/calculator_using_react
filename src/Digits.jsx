@@ -11,20 +11,20 @@ function Digits({getVal}) {
 <p className="border-black border-[1px] border-solid px-[70px] py-[20px]" onClick={()=>getVal(1)}>1</p>
 <p className="border-black border-[1px] border-solid px-[70px] py-[20px]" onClick={()=>getVal(2)}>2</p>
 <p className="border-black border-[1px] border-solid px-[70px] py-[20px]" onClick={()=>getVal(3)}>3</p>
-<Sum />
+<Sum getVal={getVal}/>
 <p className="border-black border-[1px] border-solid px-[70px] py-[20px]" onClick={()=>getVal(4)}>4</p>
 <p className="border-black border-[1px] border-solid px-[70px] py-[20px]" onClick={()=>getVal(5)}>5</p>
 <p className="border-black border-[1px] border-solid  px-[70px] py-[20px]" onClick={()=>getVal(6)}>6</p>
-<Subtract />
+<Subtract getVal={getVal} />
 <p className="border-black border-[1px] border-solid  px-[70px] py-[20px]" onClick={()=>getVal(7)}>7</p>
 <p className="border-black border-[1px] border-solid  px-[70px] py-[20px]" onClick={()=>getVal(8)}>8</p>
 <p className="border-black border-[1px] border-solid  px-[70px] py-[20px]" onClick={()=>getVal(9)}>9</p>
-<Multiply />
+<Multiply getVal={getVal} />
 <p className="border-black border-[1px] border-solid  px-[70px] py-[20px]" onClick={()=>getVal('.')}>.</p>
 <p className="border-black border-[1px] border-solid  px-[70px] py-[20px]" onClick={()=>getVal(0)}>0</p>
 
 <p className="border-black border-[1px] border-solid  px-[70px] py-[20px]" onClick={()=>getVal('=')}>=</p>
-<Divide />
+<Divide getVal={getVal}/>
 
 
       </div>
