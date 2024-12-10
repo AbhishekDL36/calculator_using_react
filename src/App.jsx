@@ -8,6 +8,7 @@ function App() {
     bool:false,
     value:""
   })
+  const [clicked,setClicked]= useState(false)
   const [index,setIndex]= useState(0)
   const [finalans,setFinalans] = useState(0)
   const [ans,setAns]= useState({
@@ -57,14 +58,13 @@ alert('select the other value')
         ...ans, 
         b:Number(num)
       })
-
-    
+setClicked(true)
     }
   }
 
   if(val==="cross"){
     setFinalans(0)
-    setValues(0)
+    setValues("")
     setAns({
       a:0,
       b:0
@@ -79,19 +79,31 @@ alert('select the other value')
   }
   useEffect(()=>{
     console.log(values,ans,index,finalans)
-    switch(operator.value){
-      case '+':    setFinalans(ans.a+ans.b)
-      break
-      case '-' : setFinalans(ans.a-ans.b)
-      break
-      case '*': setFinalans(ans.a*ans.b)
-      break
-      case '%'  : setFinalans((ans.a/ans.b).toFixed(3))
-     
+if(clicked){
+  let res;
+  switch(operator.value){
+    case '+':   res= ans.a+ans.b
+   
+    break
+    case '-' :res=ans.a-ans.b
+    break
+    case '*': res= ans.a*ans.b
+    break
+    case '%'  : res=(ans.a/ans.b).toFixed(3)
+   
 
-    }
+  }
+
+  setFinalans(res); // Update finalans
+  setValues(res);
+}
+
+setClicked(false)
+    
+
+
  
-  },[values,finalans,ans.a,ans.b])
+  },[values,finalans,ans.a,ans.b,clicked])
   return (
     <div className="h-[100vh] bg-gray-100 ">
      
